@@ -1,0 +1,109 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo do display */
+.display {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#calc-display {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f4f4f4;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.operator {
+    background: #f39c12;
+}
+
+.operator:hover {
+    background: #d87c0b;
+}
+
+/* Botão especial */
+#history-container {
+    display: none; /* Escondido inicialmente */
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.history h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.history li {
+    font-size: 1rem;
+    padding: 5px;
+    background: #f8f9fa;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/* Estilo responsivo */
+@media (max-width: 480px) {
+    #calc-display {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
